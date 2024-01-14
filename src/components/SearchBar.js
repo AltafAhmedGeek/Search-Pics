@@ -1,13 +1,20 @@
-function SearchBar({onSubmit}) {
-  const handlerFormSubmit = (event) => { 
+import { useState } from "react";
+
+function SearchBar({ onSubmit }) {
+  const [search, setSearch] = useState("");
+  const handleChange = (e) => {
+    setSearch(e.target.value.replace(/[0-9]/,''));
+  };
+  const handleFormSubmit = (event) => {
     event.preventDefault();
-    // never ever do this 
-    onSubmit(document.querySelector('input').value)
-   }
+    onSubmit(search)
+    // never ever do this
+    // onSubmit(document.querySelector("input").value);
+  };
   return (
     <div>
-      <form onSubmit={handlerFormSubmit}>
-        <input />
+      <form onSubmit={handleFormSubmit}>
+        <input value={search} onChange={handleChange} />
       </form>
     </div>
   );
