@@ -1,0 +1,21 @@
+.searchBar{
+    border: 2px solid grey;
+    border-radius: 10px;
+    width: 70%;
+    padding: 5px;
+    display: flex;
+    margin: 10px auto;
+    background-color: #eaeaea;
+    font-family: monospace;
+}
+
+.searchScreen{
+    columns: 6 200px;
+    column-gap: 10px;
+}
+img{
+    width: 100%;
+    margin-bottom: 10%;
+    border: 20px black;
+    border-radius: 8px;
+}

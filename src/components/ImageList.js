@@ -3,7 +3,7 @@ function ImageList({ images }) {
   const renderedImages = images.map((image) => {
     return <ImageShow image={ image } />
   })
-  return <div>{renderedImages }</div>;
+  return <div className="searchScreen">{renderedImages}</div>;
 }
  
 export default ImageList;
